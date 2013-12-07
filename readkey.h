@@ -8,8 +8,8 @@
 
 #include <termios.h>
 
-#ifndef PROGRAM_H
-#define	PROGRAM_H
+#ifndef READKEY_H
+#define	READKEY_H
 
 typedef struct {
 	struct termios modified;
@@ -24,4 +24,4 @@ int readKey(char* buff);
 //1 - error switching terminal mode
 //2 - error applying all settings
 
-#endif	/* PROGRAM_H */
+#endif	/* READKEY_H */
