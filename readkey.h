@@ -2,7 +2,8 @@
  * Pawel Kubik
  * Warsaw University of Technology
  * EiTI
- * readkey.h
+ * 
+ * readkey
  * Simple unbuffered input
  */
 
@@ -17,11 +18,15 @@ typedef struct {
 } TermiosStates;
 
 int initReadKey();
-//1 - error getting current terminal settings
+//-1 - error getting current terminal settings
 
-int readKey(char* buff);
-//buff - char[3]
-//1 - error switching terminal mode
-//2 - error applying all settings
+int readKey(char* buff, unsigned int size);
+//returns number of read bytes or:
+//-1 - error switching terminal mode
+//-2 - error applying all settings
+
+int awaitKey();
+//-1 - error switching terminal mode
+//-2 - error applying all settings
 
 #endif	/* READKEY_H */
