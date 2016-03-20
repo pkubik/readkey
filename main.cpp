@@ -11,5 +11,9 @@ int main() {
 		awaitKey();
 		std::cout<<static_cast<int>(c[0])<<" "<<static_cast<int>(c[1])<<" "<<static_cast<int>(c[2])<<"\n";
 	}
+	
+	unknownVariable = 0;
+	
+	return 0;
 }
 
